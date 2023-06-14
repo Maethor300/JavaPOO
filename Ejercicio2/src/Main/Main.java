@@ -8,9 +8,9 @@ public class Main {
         System.out.println("Introduce el radio del circulo: ");
         circulo.crearCircunferencia();
         System.out.println("Radio: " + circulo.getRadio());
-        circulo.area1();
-        System.out.println("Area: " + circulo.area);
-        circulo.perimetro1();
-        System.out.println("Perimetro: " + circulo.perimetro);
+
+        System.out.println("Area: " + circulo.area1());
+
+        System.out.println("Perimetro: " + circulo.perimetro1());
     }
 }
