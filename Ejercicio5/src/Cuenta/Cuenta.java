@@ -56,6 +56,11 @@ public class Cuenta {
             this.saldo = saldo - veintePC;
         }
      }
+     public void consultarDatos(){
+         System.out.println("Numero De Cuenta: " + numeroCuenta);
+         System.out.println("DNI: " + DNI);
+         System.out.println("Saldo: " + saldo);
+     }
     public int getSaldo() {
         return saldo;
     }

@@ -13,9 +13,10 @@ public class Main {
 
             System.out.println("Opcion 1 : Ingresar ");
             System.out.println("Opcion 2 : Retiro");
-            System.out.println("Opcion 3: Retirar 20%");
+            System.out.println("Opcion 3 : Retirar 20%");
             System.out.println("Opcion 4 : Consultar Saldo");
-            System.out.println("Opcion 5 : Salir");
+            System.out.println("Opcion 5 : Consultar Datos");
+            System.out.println("Opcion 6 : Salir");
             int num1 = scanner.nextInt();
             switch (num1){
                 case 1 : cuenta.ingresar();
@@ -31,7 +32,11 @@ public class Main {
                 case 4:
                     System.out.println(cuenta.getSaldo());
                 break;
-                case 5 : trueOr = false;
+                case 5 :
+                    cuenta.consultarDatos();
+                break;
+                case 6:
+                    trueOr = false;
                 break;
                 default:
                     System.out.println("Error");
