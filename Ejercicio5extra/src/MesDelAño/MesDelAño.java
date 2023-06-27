@@ -10,7 +10,7 @@ public class MesDelAño {
         Scanner scanner = new Scanner(System.in);
         String mes = scanner.next();
          do {
-           
+
              if(mes.equals(mesSecreto)){
                  System.out.println("Haz acertado");
                  break;
