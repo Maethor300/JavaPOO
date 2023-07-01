@@ -14,7 +14,7 @@ public class Alquiler {
     private String peliculaAlquilada;
     private LocalDate fechaIncio;
     private LocalDate fechaFin;
-    private int precio;
+    private static int precio ;
 
     public void crearAlquiler(){
         Menu menu = new Menu();

@@ -13,7 +13,7 @@ public class Pelicula {
       private String duracion;
       private static int count = 0 ;
       private static String dataBase[][] =  new String[100][8];
-      private static String comparacion [][] = new String[100][8];
+      private static String comparacion [][] = new String[100][5];
       public void CrearPelicula(){
             Alquiler alquiler = new Alquiler();
             int count2;
@@ -25,7 +25,7 @@ public class Pelicula {
              do {
                    count2 = count;
                    boolean trueOrFalse1 = true;
-                   String[] pelicula = new String[8];
+                   String[] pelicula = new String[5];
                    System.out.println("Digita el titulo de la pelicula");
                    String titulo = scanner.nextLine();
                    System.out.print("Ingrese el genero de la pelicula");
@@ -36,7 +36,6 @@ public class Pelicula {
                    String duracion = scanner.nextLine();
                    boolean alquiladoOrNot = true;
                    String toString = String.valueOf(alquiladoOrNot);
-
                                this.titulo = titulo;
                                this.genero = genero;
                                this.año = año;
@@ -56,6 +55,7 @@ public class Pelicula {
                                      for (int k = 0; k < comparacion.length; k++) {
                                            if(dataBase[i][0] != null && dataBase[i][0].equals(comparacion[k][0])){
                                                  System.out.println("La pelicula ya existe");
+                                                   trueOrFalse1 = false;
                                                  break;
                                            }else {
                                                  if(k == 0&&j == 0){

@@ -4,6 +4,7 @@ import BuscarFecha.BuscarFecha;
 import BuscarGenero.BuscarGenero;
 import BuscarTitulo.BuscarTitulo;
 import MostrarAllPeliculas.MostrarAllPeliculas;
+import MostrarPrecioTotal.MostrarPrecioTotal;
 import Pelicula.Pelicula;
 import PeliculasDisponibles.PeliculasDisponibles;
 
@@ -18,6 +19,7 @@ public class Menu {
         PeliculasDisponibles peliculasDisponibles = new PeliculasDisponibles();
         BuscarTitulo buscarTitulo = new BuscarTitulo();
         BuscarFecha buscarFecha = new BuscarFecha();
+        MostrarPrecioTotal mostrarPrecioTotal = new MostrarPrecioTotal();
         Scanner scanner = new Scanner(System.in);
         boolean trueOrFalse = true;
 
@@ -58,8 +60,12 @@ public class Menu {
                     break;
                 case 6:
                      buscarGenero.BuscarGenero();
+                     break;
                 case 7:
                     buscarFecha.buscarFecha();
+                    break;
+                case 8:
+                     mostrarPrecioTotal.mostrarPrecio();
                 case 9:
                     trueOrFalse = false;
                 break;
