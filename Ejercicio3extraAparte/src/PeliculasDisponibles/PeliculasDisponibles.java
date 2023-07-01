@@ -13,7 +13,7 @@ public class PeliculasDisponibles {
             for (int j = 0; j < 5; j++) {
                 if(database[i][j] == null){
                     System.out.println("No hay ninguna en la base de datos");
-                    pelicula.CrearPelicula();
+                    menu.menu();
                 }else {
                     if(database[i][4].equals("true")){
                         System.out.print("Disponibles: " + database[i][0] + " ");

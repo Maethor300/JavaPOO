@@ -19,7 +19,7 @@ public class BuscarFecha {
             for (int j = 0; j < 5; j++) {
                 if(database[i][j]== null){
                     System.out.println("La base de datos esta vacia");
-                    pelicula.CrearPelicula();
+                    menu.menu();
                 }else {
                     if(database[i][5] != null && database[i][5].equals(fecha)){
                         System.out.print(database[i][j]+" ");

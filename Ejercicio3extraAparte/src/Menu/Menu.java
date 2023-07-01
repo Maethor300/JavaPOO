@@ -42,9 +42,9 @@ public class Menu {
                             pelicula.setCount(1);
                             pelicula.CrearPelicula();
                         }else {
-
                             pelicula.CrearPelicula();
                         }
+
                 break;
                 case 2:
                     alquiler.crearAlquiler();
@@ -66,6 +66,7 @@ public class Menu {
                     break;
                 case 8:
                      mostrarPrecioTotal.mostrarPrecio();
+                     break;
                 case 9:
                     trueOrFalse = false;
                 break;

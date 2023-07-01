@@ -1,5 +1,4 @@
 package Pelicula;
-import Alquiler.Alquiler;
 import Menu.Menu;
 
 import java.util.Arrays;
@@ -11,20 +10,22 @@ public class Pelicula {
       private String genero;
       private String año;
       private String duracion;
-      private static int count = 0 ;
+      private int count = 0;
       private static String dataBase[][] =  new String[100][8];
-      private static String comparacion [][] = new String[100][5];
+      private static String comparacion [][] = new String[200][5];
       public void CrearPelicula(){
-            Alquiler alquiler = new Alquiler();
-            int count2;
+
+            int count2 ;
             Menu menu = new Menu();
-
+            boolean trueOrfalse2 = true;
             Scanner scanner = new Scanner(System.in);
-
+            boolean trueOrFalse1 = false;
 
              do {
                    count2 = count;
-                   boolean trueOrFalse1 = true;
+                   System.out.println("count2:" +  count2);
+                   System.out.println(count);
+
                    String[] pelicula = new String[5];
                    System.out.println("Digita el titulo de la pelicula");
                    String titulo = scanner.nextLine();
@@ -55,41 +56,51 @@ public class Pelicula {
                                      for (int k = 0; k < comparacion.length; k++) {
                                            if(dataBase[i][0] != null && dataBase[i][0].equals(comparacion[k][0])){
                                                  System.out.println("La pelicula ya existe");
-                                                   trueOrFalse1 = false;
-                                                 break;
+                                                   trueOrFalse1 = true;
+                                                   dataBase[i][0] = "*";
+                                                   this.count--;
+
                                            }else {
-                                                 if(k == 0&&j == 0){
-                                                       this.count++;
-                                                 }
+
                                                  dataBase[i][j] = pelicula[j];
+                                                 trueOrFalse1 = false;
+
                                            }
+
                                      }
+
 
                                }
 
                          }
 
                    }
+
+                   if(!trueOrFalse1){
+                         System.out.println(count);
+                         this.count++;
+
+                   }
                    for (int i = count2; i < dataBase.length; i++) {
                          for (int j = 0; j < 5; j++) {
-                               this.comparacion[i][0] = titulo;
+                                     this.comparacion[i][0] = titulo;
                          }
                    }
+
                    System.out.println("Quieres agregar otra S/N");
                    String desicion = scanner.nextLine();
                    String mayuscula = desicion.toUpperCase();
                    if(count < 2){
                          System.out.println("Tiene que agregar minimo 2 peliculas");
-                   }else {
-                         if(mayuscula.equals("N")){
-                               menu.menu();
-                               break;
-                         }
+
+                   }else if(mayuscula.equals("N")) {
+
+                               trueOrfalse2 = false;
                    }
 
 
 
-             }while(true);
+             }while(trueOrfalse2);
             System.out.println();
       }
 
