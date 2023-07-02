@@ -71,11 +71,10 @@ public class Menu {
                     trueOrFalse = false;
                 break;
                 default:
+                    System.out.println("Error");
 
             }
-            if(!trueOrFalse){
-                break;
-            }
-        }while (true);
+
+        }while (trueOrFalse);
     }
 }

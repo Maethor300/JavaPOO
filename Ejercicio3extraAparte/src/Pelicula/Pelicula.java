@@ -59,7 +59,6 @@ public class Pelicula {
                                                    trueOrFalse1 = true;
                                                    dataBase[i][0] = "*";
                                                    this.count--;
-
                                            }else {
 
                                                  dataBase[i][j] = pelicula[j];
