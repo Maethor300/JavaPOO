@@ -10,7 +10,7 @@ public class Pelicula {
       private String genero;
       private String año;
       private String duracion;
-      private int count = 0;
+      int count = 0;
       private static String dataBase[][] =  new String[100][8];
       private static String comparacion [][] = new String[200][5];
       public void CrearPelicula(){
@@ -18,10 +18,12 @@ public class Pelicula {
             int count2 ;
             Menu menu = new Menu();
             boolean trueOrfalse2 = true;
+
             Scanner scanner = new Scanner(System.in);
-            boolean trueOrFalse1 = false;
 
              do {
+                   boolean trueOrFalse1 = false;
+                   boolean foundDuplicate = false;
                    count2 = count;
                    System.out.println("count2:" +  count2);
                    System.out.println(count);
@@ -57,8 +59,9 @@ public class Pelicula {
                                            if(dataBase[i][0] != null && dataBase[i][0].equals(comparacion[k][0])){
                                                  System.out.println("La pelicula ya existe");
                                                    trueOrFalse1 = true;
+                                                 foundDuplicate = true;
                                                    dataBase[i][0] = "*";
-                                                   this.count--;
+                                                   break;
                                            }else {
 
                                                  dataBase[i][j] = pelicula[j];
@@ -74,7 +77,9 @@ public class Pelicula {
                          }
 
                    }
-
+                   if (foundDuplicate) {
+                         this.count--;
+                   }
                    if(!trueOrFalse1){
                          System.out.println(count);
                          this.count++;
